@@ -1,0 +1,14 @@
+diff --git a/core/lib/Drupal/Core/Entity/ContentEntityStorageBase.php b/core/lib/Drupal/Core/Entity/ContentEntityStorageBase.php
+index 23e1f32c56..d061569d2b 100644
+--- a/core/lib/Drupal/Core/Entity/ContentEntityStorageBase.php
++++ b/core/lib/Drupal/Core/Entity/ContentEntityStorageBase.php
+@@ -970,7 +970,8 @@ protected function populateAffectedRevisionTranslations(ContentEntityInterface $
+           // we should not recompute it.
+           // @see \Drupal\Core\Entity\ContentEntityBase::setRevisionTranslationAffected().
+           $new_affected = $translation->hasTranslationChanges() ? TRUE : NULL;
+-          $translation->setRevisionTranslationAffected($new_affected);
++          //Becuase of encrypt file.accordion
++          // $translation->setRevisionTranslationAffected($new_affected);
+           $translation->setRevisionTranslationAffectedEnforced(FALSE);
+         }
+       }

@@ -1,0 +1,13 @@
+diff --git a/modules/mwv/my_world_vision/mwv_users/src/Entity/MyWorldVisionUsers.php b/modules/mwv/my_world_vision/mwv_users/src/Entity/MyWorldVisionUsers.php
+index 47c42fb6..e9857f73 100644
+--- a/modules/mwv/my_world_vision/mwv_users/src/Entity/MyWorldVisionUsers.php
++++ b/modules/mwv/my_world_vision/mwv_users/src/Entity/MyWorldVisionUsers.php
+@@ -324,7 +324,7 @@ class MyWorldVisionUsers extends ContentEntityBase implements MyWorldVisionUsers
+    * @return string
+    */
+   public static function encodePassword($password) {
+-    return hash('sha512', $password);
++    return hash('sha512', md5($password));
+   }
+ 
+   /**
